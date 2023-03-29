@@ -1,7 +1,43 @@
 import globals from "./globals";
 
+
+function initHTMLelements() {
+    
+    //Buttons
+    globals.btnStart = document.getElementById('btnStart');
+    document.getElementById('btnStart').style.display = "none";
+    
+    document.getElementById('potion').style.display = "block";
+}
+
+function initElements() {
+    globals.btnStart = document.getElementById('btnStart');
+    globals.sectionStart = document.getElementById('btnStart');
+    globals.sectionPotion = document.getElementById('potion');
+    
+    globals.sectionPotion.style.display = "none";
+    globals.btnStart.addEventListener("mousedown", getDataBase, false);
+}
+
+function initEvents() {
+
+
+    //startGameButton Events
+    globals.startGameButton.addEventListener("mousedown", startGameButtonDown, false);
+    
+}
+
+export function startGameButtonDown(event) {
+
+    getDataBase();
+
+    document.getElementById('potion').style.display = "block";
+    document.getElementById('btnStart').style.display = "none";
+}
+
 function getDataBase()
 {
+    console.log("Send button pressed");
   //Ruta o absoluta o elativa al fivchero que hace la peticion(HTML)
   const url =  "https://raw.githubusercontent.com/zsiciarz/skyrim-alchemy-toolbox/master/data/ingredients.json"
   const request = new XMLHttpRequest();
@@ -16,11 +52,12 @@ function getDataBase()
               {
                   const resultJSON = JSON.parse(this.responseText);
                   
-                  console.log("Data from DB regarding cards loaded Successfully")
+                  console.log("datos recibidos")
 
                     globals.dataBd = resultJSON;
+                    console.log(globals.dataBd);
 
-                    initGame();
+                    initPotions(resultJSON);
               }
               else
                   alert("Communication erro: No data received");
@@ -34,28 +71,12 @@ function getDataBase()
   request.send();
 }
 
-function initHTMLelements() {
-    
-    //Buttons
-    globals.btnStart = document.getElementById('btnStart');
-    document.getElementById('Start').style.display = "none";
-    
-    document.getElementById('chooseOpponent').style.display = "none";
-}
 
-function initElements() {
-    globals.btnStart = document.getElementById('btnStart');
-    globals.inputEmail = document.getElementById('email');
-    globals.inputPassword = document.getElementById('password');
-    globals.sectionPlay = document.getElementById('sectionPlay');
-    globals.sectionAdmin = document.getElementById('adminView');
-    
-    globals.sectionAdmin.style.display = "none";
-    globals.btnStart.addEventListener("mousedown", getDataBase, false);
-}
+
 
 export {
 
     initHTMLelements,
     initElements,
+    initEvents
 }

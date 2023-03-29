@@ -5,6 +5,10 @@ export default {
 dataBd: {},
 
 //Boton start
-btnStart: {}
+btnStart: {},
+
+sectionStart: {},
+
+sectionPotion: {}
 
 }

@@ -12,10 +12,4 @@ function init() {
 
     //Inicializar elementos por id
     initElements();
-
-    // //Inicializar variables
-    // initVars();
-
-    // //Initialize events
-    // initEvents();
 }
