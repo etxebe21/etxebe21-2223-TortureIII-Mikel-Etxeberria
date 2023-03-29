@@ -1,7 +1,7 @@
 
 export default {
 
-//Array donde guardar datos de la Base datos
+// Base datos
 dataBd: {},
 
 //Boton start
@@ -11,6 +11,5 @@ btnPotion: {},
 
 sectionStart: {},
 
-sectionPotion: {}
-
+sectionPotion: {},
 }

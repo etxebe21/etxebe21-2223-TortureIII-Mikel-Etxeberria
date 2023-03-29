@@ -4,7 +4,6 @@
     box-sizing: border-box;
   }
   
-  
   body {
     font-family: sans-serif;
     display: flex;
@@ -16,7 +15,6 @@
     background-size: cover;
     background-position: center;
   }
-
 
 .btnStart {
     width: 500px;
@@ -42,9 +40,7 @@
     cursor: pointer;
     font-size: 2em;
     color: white;
-    font-weight: 500;
-   
-    
+    font-weight: 500; 
   }
 
   .b_container {

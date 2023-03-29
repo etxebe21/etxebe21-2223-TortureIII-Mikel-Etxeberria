@@ -1,5 +1,6 @@
 import globals from "./globals";
 
+window.onload = init;
 
 function initHTMLelements() {
     
@@ -28,7 +29,7 @@ function initEvents() {
     
 }
 
-export function startGameButtonDown(event) {
+function startGameButtonDown(event) {
 
     getDataBase();
 
@@ -86,5 +87,6 @@ export {
 
     initHTMLelements,
     initElements,
-    initEvents
+    initEvents,
+
 }
