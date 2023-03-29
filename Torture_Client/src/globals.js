@@ -1,7 +1,10 @@
 
+export default {
 
-//Base datos
-userData: {}
+//Array donde guardar datos de la Base datos
+dataBd: {},
 
 //Boton start
 btnStart: {}
+
+}
