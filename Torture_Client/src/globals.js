@@ -7,6 +7,8 @@ dataBd: {},
 //Boton start
 btnStart: {},
 
+btnPotion: {},
+
 sectionStart: {},
 
 sectionPotion: {}

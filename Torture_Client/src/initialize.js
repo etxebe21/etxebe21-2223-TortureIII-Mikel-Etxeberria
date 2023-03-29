@@ -15,6 +15,7 @@ function initElements() {
     globals.sectionStart = document.getElementById('btnStart');
     globals.sectionPotion = document.getElementById('potion');
     
+    globals.btnStart.style.display = "block";
     globals.sectionPotion.style.display = "none";
     globals.btnStart.addEventListener("mousedown", getDataBase, false);
 }
@@ -23,7 +24,7 @@ function initEvents() {
 
 
     //startGameButton Events
-    globals.startGameButton.addEventListener("mousedown", startGameButtonDown, false);
+    globals.btnStart.addEventListener("mousedown", startGameButtonDown, false);
     
 }
 
@@ -57,7 +58,7 @@ function getDataBase()
                     globals.dataBd = resultJSON;
                     console.log(globals.dataBd);
 
-                    initPotions(resultJSON);
+                    createPotions();
               }
               else
                   alert("Communication erro: No data received");
@@ -69,6 +70,13 @@ function getDataBase()
   request.open('GET', url, true);
   request.responseType = "text";
   request.send();
+}
+
+function createPotions() {
+
+    for (let i = 0; i < 4; i++) {
+        document.write("Ingredientes" + dataBd[Math.floor(Math.random())] * 4);
+    }
 }
 
 

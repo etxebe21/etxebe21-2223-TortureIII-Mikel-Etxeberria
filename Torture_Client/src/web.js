@@ -1,4 +1,4 @@
-import { initElements, initHTMLelements } from "./initialize.js";
+import { initElements, initEvents, initHTMLelements } from "./initialize.js";
 import globals from "./globals.js";
 
 
@@ -12,4 +12,6 @@ function init() {
 
     //Inicializar elementos por id
     initElements();
+
+    initEvents();
 }
