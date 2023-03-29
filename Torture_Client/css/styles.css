@@ -31,3 +31,20 @@
     font-weight: 500;
     position: relative;
   }
+
+  .b_container {
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .b_container div {
+    padding: 0.5rem;
+    margin: 0 1.8rem;
+    border: 2px solid black;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

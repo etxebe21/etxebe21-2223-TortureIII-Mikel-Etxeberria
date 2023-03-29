@@ -1,7 +1,8 @@
 function getDataBase()
 {
   //Ruta o absoluta o elativa al fivchero que hace la peticion(HTML)
-  const url = "http://localhost/serverClient/server/routes/getAllHighscores.php"
+//   const url = "http://localhost/serverClient/server/routes/getAllHighscores.php"
+  const url =  "https://raw.githubusercontent.com/zsiciarz/skyrim-alchemy-toolbox/master/data/ingredients.json"
   const request = new XMLHttpRequest();
 
   request.onreadystatechange = function()
