@@ -1,24 +1,26 @@
-import globals from "./globals";
+import globals from "./globals.js";
 
-window.onload = init;
+// window.onload = init;
 
 function initHTMLelements() {
     
     //Buttons
     globals.btnStart = document.getElementById('btnStart');
-    document.getElementById('btnStart').style.display = "none";
+    document.getElementById('btnStart').style.display = "block";
     
-    document.getElementById('potion').style.display = "block";
+    document.getElementById('potion').style.display = "none";
 }
 
 function initElements() {
     globals.btnStart = document.getElementById('btnStart');
     globals.sectionStart = document.getElementById('btnStart');
     globals.sectionPotion = document.getElementById('potion');
+    globals.btnStart.addEventListener("mousedown", startGameButtonDown, false);
     
-    globals.btnStart.style.display = "block";
-    globals.sectionPotion.style.display = "none";
-    globals.btnStart.addEventListener("mousedown", getDataBase, false);
+    
+    // globals.btnStart.style.display = "block";
+    // globals.sectionPotion.style.display = "none";
+    // globals.btnStart.addEventListener("mousedown", getDataBase, false);
 }
 
 function initEvents() {
